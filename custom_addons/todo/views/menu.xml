@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="todo_menu"
+        name="Todo"
+        action="todo_action"
+        sequence="1"
+        groups="todo.group_todo_creator"
+    />
+
+    <menuitem
+        id="todo_menu_creator"
+        parent="todo_menu"
+        name="Todo List for creator"
+        action="todo_action"
+        sequence="1"
+        groups="todo.group_todo_creator"
+    />
+
+    <menuitem
+        id="todo_menu"
+        parent="todo_menu"
+        name="Todo"
+        action="todo_action"
+        sequence="1"
+        groups="todo.group_todo_doer"
+    />
+
+    <menuitem
+        id="todo_menu"
+        parent="todo_menu"
+        name="Todo"
+        action="todo_action"
+        sequence="1"
+        groups="todo.group_todo_cleaner"
+    />
+</odoo>

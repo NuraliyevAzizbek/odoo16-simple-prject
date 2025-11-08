@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_todo_creator,todo.task,model_todo_task,todo.group_todo_creator,1,0,1,0
+access_todo_doer,todo.task,model_todo_task,todo.group_todo_doer,1,1,0,0
+access_todo_cleaner,todo.task,model_todo_task,todo.group_todo_cleaner,1,0,0,1

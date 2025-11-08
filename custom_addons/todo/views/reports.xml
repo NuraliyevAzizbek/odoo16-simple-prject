@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Hisobotni ro‘yxatdan o‘tkazish -->
+    <report
+        id="report_task_manager"
+        model="todo.task"
+        string="Vazifa bo'yicha hisobot"
+        report_type="qweb-pdf"
+        name="todo.task_report_template"
+    />
+
+    <!-- QWeb Template -->
+    <template id="task_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="task">
+                <div>
+                    <h3><t t-esc="task.name" /></h3>
+                    <p><strong>Tavsif:</strong> <t t-esc="task.description"/></p>
+                    <p><strong>Muddati:</strong> <t t-esc="task.deadline"/></p>
+                    <hr/>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
